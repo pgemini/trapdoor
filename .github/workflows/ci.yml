@@ -19,10 +19,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Type check
-        run: npx tsc --noEmit
-
-      - name: Build
+      - name: Build (includes TypeScript check)
         run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: '1'
